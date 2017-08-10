@@ -1,0 +1,28 @@
+{
+  "name": "tslint-react",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@types/jest": "^20.0.6",
+    "@types/node": "^8.0.19",
+    "@types/react": "^16.0.1",
+    "@types/react-dom": "^15.5.2",
+    "material-ui": "next",
+    "node-sass-chokidar": "^0.0.3",
+    "npm-run-all": "^4.0.2",
+    "react": "^15.6.1",
+    "react-addons-pure-render-mixin": "^15.6.0",
+    "react-dom": "^15.6.1",
+    "react-scripts-ts": "2.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start-ts": "react-scripts-ts start",
+    "start": "npm-run-all -p watch-css start-ts",
+    "build": "npm run build-css && react-scripts-ts build",
+    "test": "react-scripts-ts test --env=jsdom",
+    "eject": "react-scripts-ts eject",
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive"
+  }
+}

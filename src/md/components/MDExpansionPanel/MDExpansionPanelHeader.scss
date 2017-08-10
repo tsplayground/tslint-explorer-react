@@ -1,0 +1,30 @@
+@import './variables';
+.MDExpansionPanelHeader {
+  padding: $padding;
+  cursor: pointer;
+  outline: 0;
+}
+
+.MDExpansionPanelHeader:hover,
+.MDExpansionPanelHeader:focus {
+  background: #f9f9f9;
+}
+
+.MDExpansionPanelHeader-title {
+  flex: 1 1 25%;
+}
+
+.MDExpansionPanelHeader-description {
+  flex: 1 1 70%;
+  color: #727272;
+}
+
+.MDExpansionPanelHeader-arrow-down svg {
+  transition: transform 0.2s;
+  width: 24px;
+  height: 24px;
+}
+
+.MDExpansionPanelHeader.is-toggled .MDExpansionPanelHeader-arrow-down svg {
+  transform: rotate(180deg);
+}
