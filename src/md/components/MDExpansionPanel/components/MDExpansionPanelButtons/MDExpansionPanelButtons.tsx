@@ -9,7 +9,7 @@ export class MDExpansionPanelButtons extends React.Component {
   public render(): JSX.Element| null {
     return (
       <div className="MDExpansionPanelButtons">
-        {this.props.children}>
+        {this.props.children}
       </div>
     );
   }

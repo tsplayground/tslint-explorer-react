@@ -28,18 +28,3 @@
 .MDExpansionPanel.is-toggled {
   margin: 0.8em 0;
   border-radius: 1px; }
-
-.MDExpansionPanel-content {
-  flex: 1 1 100%;
-  margin-left: 25%;
-  background: #fff;
-  padding: 14px 10px;
-  outline: 0; }
-
-.MDExpansionPanelHeader-arrow-down {
-  flex: 1 1 5%;
-  align-items: flex-end; }
-
-.MDExpansionPanel-buttons {
-  display: flex;
-  flex-direction: row-reverse; }

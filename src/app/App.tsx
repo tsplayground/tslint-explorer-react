@@ -1,23 +1,25 @@
 import * as React from 'react';
-import {
-  MDExpansionPanel,
-  MDExpansionPanelContainer
-} from '../md';
 import './App.css';
+import { appReducer } from './reducers';
+import {
+  applyMiddleware,
+  createStore
+} from 'redux';
+import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
+import { AppContainer } from './containers';
+import { processManager } from './middlewares';
+const store = createStore(
+  appReducer,
+  applyMiddleware(processManager),
+  applyMiddleware(thunk));
 
-const logo = require('./logo.svg');
-
-export class App extends React.Component<{}, {}> {
+export class App extends React.Component {
   public render(): JSX.Element {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-        </div>
-        <MDExpansionPanelContainer>
-          <MDExpansionPanel/>
-        </MDExpansionPanelContainer>
-      </div>
+      <Provider store={store}>
+        <AppContainer/>
+      </Provider>
     );
   }
 }

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import './MDExpansionPanelContainer.css';
-import { MDExpansionPanel } from './MDExpansionPanel';
+import { MDExpansionPanel } from '../MDExpansionPanel';
 
 export class MDExpansionPanelContainer extends React.Component<{}, {}> {
   public states: {

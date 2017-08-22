@@ -1,0 +1,9 @@
+.search-box {
+  position: absolute !important;
+  top: 2em;
+  left: 0; }
+  .search-box.sticky {
+    top: 0;
+    position: fixed;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.9); }

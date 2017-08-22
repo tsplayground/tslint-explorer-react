@@ -1,2 +1,2 @@
-export * from './AppContent';
+export * from './App';
 export * from './TSLintRules';
