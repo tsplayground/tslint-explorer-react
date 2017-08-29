@@ -38,7 +38,6 @@ const getVisibleTSLintRules = (rules: ITSLintRule[], filter: string): ITSLintRul
 };
 
 const mapStateToProps = (state: any, ownProps: any) => {
-  console.log(state.tsLintRulesVisibilityReducer);
   const visibleTSLintRules = getVisibleTSLintRules(
     state.tsLintRulesReducer,
     state.tsLintRulesVisibilityReducer);
@@ -72,7 +71,6 @@ const mapDispatchToProps = (dispatch: IDispatcher<any>) => {
       dispatch(submitPanel(id, value));
     },
     onRuleFilter: (id: string, filter: string) => {
-      console.log(filter);
       dispatch(setVisibilityFilter(id, filter));
     }
   };

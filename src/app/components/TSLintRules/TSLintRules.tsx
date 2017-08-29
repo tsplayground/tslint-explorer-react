@@ -43,6 +43,8 @@ export class TSLintRules extends React.Component {
     }
     this.filterRule = this.filterRule.bind(this);
     this.keywordsChange = this.keywordsChange.bind(this);
+    // this.filterRule = ::this.filterRule; // bind operator
+    // this.keywordsChange = ::this.keywordsChange; // bind operator
   }
 
   public filterRule(e: React.KeyboardEvent<any>): void {
