@@ -1,5 +1,7 @@
 import * as React from 'react';
 import './App.css';
+import { BrowserRouter } from 'react-router-dom';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { appReducer } from './reducers';
 import {
   applyMiddleware,
@@ -17,9 +19,13 @@ const store = createStore(
 export class App extends React.Component {
   public render(): JSX.Element {
     return (
+      <MuiThemeProvider>
       <Provider store={store}>
-        <AppContainer/>
+        <BrowserRouter>
+          <AppContainer {...this.props}/>
+        </BrowserRouter>
       </Provider>
+      </MuiThemeProvider>
     );
   }
 }
